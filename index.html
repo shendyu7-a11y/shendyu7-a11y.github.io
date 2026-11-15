@@ -186,6 +186,9 @@ dialog.lb button{font:inherit;color:#fff;background:transparent;border:1px solid
 .ph-strip .thumb{padding:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--paper);cursor:zoom-in;aspect-ratio:3/4}
 .ph-strip.act{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin-top:14px}
 .ph-strip.act .thumb{aspect-ratio:4/3}
+.ph-strip.pa{grid-template-columns:repeat(3,minmax(0,1fr));margin:4px 0 12px}
+.ph-strip.pa .thumb{aspect-ratio:16/10}
+.ph-strip.pa img{object-position:left top}
 .ph-strip img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
 .ph-strip .thumb:hover img{transform:scale(1.05)}
 /* contact */
@@ -348,6 +351,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <article class="proj">
         <div class="no"><span class="mono">PRJ-02 · Merak Chemicals · 2026</span><span class="mono">Digital maintenance</span></div>
         <h3>Daily Work Mechanical app</h3>
+        <div class="ph-strip pa">
+          <button type="button" class="thumb" data-full="certs/pa-officer.jpg" data-title="Officer view: daily dashboard with add, edit and duplicate log"><img src="certs/pa-officer.jpg" alt="Officer view: daily dashboard with add, edit and duplicate log" loading="lazy"></button>
+          <button type="button" class="thumb" data-full="certs/pa-technician.jpg" data-title="Technician view: jobs with report status and job class"><img src="certs/pa-technician.jpg" alt="Technician view: jobs with report status and job class" loading="lazy"></button>
+          <button type="button" class="thumb" data-full="certs/pa-summary.jpg" data-title="Daily activity summary: monthly calendar of jobs worked"><img src="certs/pa-summary.jpg" alt="Daily activity summary: monthly calendar of jobs worked" loading="lazy"></button>
+        </div>
         <p>Replaced the Excel maintenance log with a Power Apps app, moved 500+ records to SharePoint, and added role-based access, overtime calculation and automatic report uploads with Power Automate.</p>
         <div class="spec"><span class="chip">Power Apps</span><span class="chip">SharePoint</span><span class="chip">Power Automate</span></div>
       </article>
