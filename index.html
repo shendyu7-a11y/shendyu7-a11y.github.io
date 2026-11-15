@@ -80,13 +80,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .tblock .head small{display:block}
 
 /* stats */
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
 .stat{padding:26px 20px;border-right:1px solid var(--line)}
 .stat:last-child{border-right:0}
 .stat strong{display:block;font:800 2.2rem var(--f-display);font-stretch:75%;line-height:1;margin-bottom:8px;font-variant-numeric:tabular-nums}
 .stat strong em{font-style:normal;font-size:1rem;color:var(--accent);margin-left:2px}
 .stat p{font-size:.9rem;color:var(--ink-2)}
-@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media (max-width:760px){.stats{grid-template-columns:1fr}.stat{border-right:0;padding:20px 16px}.stat:not(:last-child){border-bottom:1px solid var(--line)}}
 
 /* sections */
 section.s{padding-block:72px;border-bottom:1px solid var(--line);scroll-margin-top:30px}
@@ -269,7 +269,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 <div class="wrap">
   <div class="stats">
     <div class="stat"><strong>3</strong><p>industrial placements: geothermal, EPC pharma, petrochemical</p></div>
-    <div class="stat"><strong>2<em>in</em></strong><p>boiler tube plugs designed for steam &amp; water drums</p></div>
     <div class="stat"><strong>500<em>+</em></strong><p>maintenance records migrated to a Power Apps system</p></div>
     <div class="stat"><strong>20<em>kg/h</em></strong><p>plastic waste melting machine, built for my final project</p></div>
   </div>
