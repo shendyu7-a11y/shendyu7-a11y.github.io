@@ -433,6 +433,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <a class="doc-link" href="certs/Seminar_Slides_Star_Energy_2025.pdf" target="_blank" rel="noopener">Seminar slides (PDF) ↗</a>
         <div class="spec"><span class="chip">SolidWorks</span><span class="chip">FEM</span><span class="chip">SS 316L</span><span class="chip">BOM</span><span class="chip">Fabrication plan</span></div>
       </article>
+      <article class="proj feature">
+        <div class="no"><span class="mono">PRJ-05 · Polban · 2024</span><span class="mono">Robotics · Mechatronics</span></div>
+        <h3>2-axis drawing robot arm</h3>
+        <p>Course project for Robotics: a 2-degree-of-freedom robot arm that draws a triangle on its own. In the team, I designed the arm structure in SolidWorks for range of motion and stability, and:</p>
+        <ul class="pts">
+          <li>Selected the hardware: an Arduino Uno as the controller and one servo motor per joint.</li>
+          <li>Made the links, joints and base by 3D printing.</li>
+          <li>Used MATLAB to solve the inverse kinematics and the joint torques.</li>
+          <li>Wrote the Arduino (C/C++) program that turns target coordinates into servo angles.</li>
+          <li>Calibrated and tested the arm for accurate, repeatable drawing.</li>
+        </ul>
+        <p><strong>Result:</strong> a working prototype that draws a triangle from the program, graded A for the final project assessment.</p>
+        <div class="calc-grid">
+          <figure><button type="button" class="thumb" data-full="certs/rb-cad.jpg" data-title="SolidWorks design · Full arm assembly with pen holder"><img src="certs/rb-cad.jpg" alt="SolidWorks assembly of the 2-axis drawing robot arm" loading="lazy"></button><figcaption><strong>SolidWorks design</strong> Full arm assembly with pen holder</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/rb-fea.jpg" data-title="Static FEA · Displacement check of the joint part"><img src="certs/rb-fea.jpg" alt="SolidWorks static displacement plot of a robot joint" loading="lazy"></button><figcaption><strong>Static FEA</strong> Displacement check of the joint part</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/rb-matlab.jpg" data-title="Inverse kinematics · Joint angles calculated in MATLAB"><img src="certs/rb-matlab.jpg" alt="MATLAB script calculating inverse kinematics" loading="lazy"></button><figcaption><strong>Inverse kinematics</strong> Joint angles calculated in MATLAB</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/rb-print.jpg" data-title="3D printing · Printed links, joints and base"><img src="certs/rb-print.jpg" alt="3D printer producing the blue robot arm parts" loading="lazy"></button><figcaption><strong>3D printing</strong> Printed links, joints and base</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/rb-assembly.jpg" data-title="Assembly · Arduino Uno, servos and wiring"><img src="certs/rb-assembly.jpg" alt="Assembled robot arm wired to an Arduino Uno" loading="lazy"></button><figcaption><strong>Assembly</strong> Arduino Uno, servos and wiring</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/rb-team.jpg" data-title="Final demo · With the project team"><img src="certs/rb-team.jpg" alt="Project team with the finished robot arm and laptop" loading="lazy"></button><figcaption><strong>Final demo</strong> With the project team</figcaption></figure>
+        </div>
+        <div class="spec"><span class="chip">SolidWorks</span><span class="chip">MATLAB</span><span class="chip">Inverse kinematics</span><span class="chip">Arduino (C/C++)</span><span class="chip">Servo motors</span><span class="chip">3D printing</span></div>
+      </article>
     </div>
   </div>
 </section>
