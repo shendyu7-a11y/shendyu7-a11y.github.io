@@ -192,6 +192,12 @@ dialog.lb button{font:inherit;color:#fff;background:transparent;border:1px solid
 .ph-strip.calc{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px}
 .ph-strip.calc .thumb{aspect-ratio:16/9;background:#fff}
 .ph-strip.calc img{object-fit:contain}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.calc-grid figure{margin:0}
+.calc-grid .thumb{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;cursor:zoom-in;aspect-ratio:4/3}
+.calc-grid img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.calc-grid figcaption{font-size:.78rem;line-height:1.3;margin-top:5px;color:var(--ink-2)}
+.calc-grid figcaption strong{display:block;color:var(--ink);font-size:.8rem}
 .ph-strip img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
 .ph-strip .thumb:hover img{transform:scale(1.05)}
 /* contact */
@@ -316,9 +322,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <li>Replaced valves, pumps, PRVs and rupture discs under PTW, LOTO and JSA.</li>
         </ul>
         <p class="ph-h mono">ENGINEERING CALCULATIONS</p>
-        <div class="ph-strip calc">
-          <button type="button" class="thumb" data-full="certs/se-turbine-eff.jpg" data-title="Unit 1 &amp; 2 turbine efficiency: DCS data, calculation sheet and hand calculation"><img src="certs/se-turbine-eff.jpg" alt="Turbine efficiency calculation from DCS data" loading="lazy"></button>
-          <button type="button" class="thumb" data-full="certs/se-lrvp-test.jpg" data-title="Liquid ring vacuum pump capacity test before and after overhaul, with performance trend"><img src="certs/se-lrvp-test.jpg" alt="Liquid ring vacuum pump overhaul test calculation and performance trend" loading="lazy"></button>
+        <div class="calc-grid">
+          <figure><button type="button" class="thumb" data-full="certs/se-turb-dcs.jpg" data-title="Turbine efficiency · Unit 1 &amp; 2 data from the DCS"><img src="certs/se-turb-dcs.jpg" alt="Turbine efficiency: Unit 1 &amp; 2 data from the DCS" loading="lazy"></button><figcaption><strong>Turbine efficiency</strong> Unit 1 &amp; 2 data from the DCS</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/se-turb-sheet.jpg" data-title="Turbine efficiency · Calculation sheet"><img src="certs/se-turb-sheet.jpg" alt="Turbine efficiency: Calculation sheet" loading="lazy"></button><figcaption><strong>Turbine efficiency</strong> Calculation sheet</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/se-turb-hand.jpg" data-title="Turbine efficiency · Hand calculation"><img src="certs/se-turb-hand.jpg" alt="Turbine efficiency: Hand calculation" loading="lazy"></button><figcaption><strong>Turbine efficiency</strong> Hand calculation</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/se-lrvp-table.jpg" data-title="LRVP overhaul test · Capacity test, before vs after overhaul"><img src="certs/se-lrvp-table.jpg" alt="LRVP overhaul test: Capacity test, before vs after overhaul" loading="lazy"></button><figcaption><strong>LRVP overhaul test</strong> Capacity test, before vs after overhaul</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/se-lrvp-trend.jpg" data-title="LRVP overhaul test · Performance trend charts"><img src="certs/se-lrvp-trend.jpg" alt="LRVP overhaul test: Performance trend charts" loading="lazy"></button><figcaption><strong>LRVP overhaul test</strong> Performance trend charts</figcaption></figure>
         </div>
         <p class="ph-h mono">FIELD PHOTOS · 13</p>
         <div class="ph-strip">
