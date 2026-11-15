@@ -192,6 +192,7 @@ dialog.lb button{font:inherit;color:#fff;background:transparent;border:1px solid
 .ph-strip.calc{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px}
 .ph-strip.calc .thumb{aspect-ratio:16/9;background:#fff}
 .ph-strip.calc img{object-fit:contain}
+.cs+.calc-grid~.doc-link{margin-right:8px}.cs{margin:6px 0 12px;padding:14px 16px;border-left:3px solid var(--accent);background:var(--accent-soft)}.cs p{margin:0 0 8px}.cs .pts{margin:0 0 8px}
 .calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
 .calc-grid figure{margin:0}
 .calc-grid .thumb{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;cursor:zoom-in;aspect-ratio:4/3}
@@ -330,7 +331,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <li>Supported the solo-run commissioning and walkdown inspection of the Unit 1 cooling tower retrofit, and the removal, reinstallation and test of a liquid ring vacuum pump.</li>
           <li>Calculated Unit 1 &amp; 2 turbine efficiency and liquid ring vacuum pump overhaul test results.</li>
           <li>Replaced valves, pumps, PRVs and rupture discs under PTW, LOTO and JSA.</li>
+          <li>Case study: modification and fabrication planning of the old cooling tower torque tube for the new (retrofitted) structure, as a mitigation step. Redesigned it in SolidWorks, validated it with FEM (149 MPa max von Mises, safety factor 1.14 on SS 316L) and prepared a ready-to-fabricate package.</li>
         </ul>
+        <p class="ph-h mono">CASE STUDY · TORQUE TUBE MODIFICATION &amp; FABRICATION PLANNING</p>
+        <div class="cs">
+          <p><strong>Problem.</strong> After the Unit 1 &amp; 2 cooling tower retrofit, the new gearboxes kept overheating, raising the risk of an unplanned shutdown. The old gearbox was still sound and could serve as a backup, but its torque tube legs were built for the old structure and did not match the retrofitted beams, so it could not be installed.</p>
+          <p><strong>Approach.</strong></p>
+          <ul class="pts">
+            <li>Field survey: measured the old gearbox feet and the new beam mounting points (reverse engineering).</li>
+            <li>3D modification in SolidWorks: single to double support legs to match the new beam spacing, stiffener plates at critical joints, and a gearbox restraint.</li>
+            <li>Static FEM with design iterations until the safety factor was above 1.</li>
+            <li>Fabrication plan in three phases: incoming material control (BOM, mill test certificates), fabrication and welding per WPS with visual and dye penetrant checks, and final assembly with dimensional and NDT inspection.</li>
+          </ul>
+          <p><strong>Result.</strong> Max von Mises stress of 149 MPa against a 170 MPa yield for SS 316L (safety factor 1.14). The design is safe as a short-term mitigation and gives the plant a ready backup for the overheating gearboxes. Because the margin is tight for a dynamic component, a fatigue analysis is recommended before long-term use.</p>
+        </div>
+        <div class="calc-grid">
+          <figure><button type="button" class="thumb" data-full="certs/tt-installed.jpg" data-title="Modified design · Torque tube on the retrofitted beams (SolidWorks)"><img src="certs/tt-installed.jpg" alt="3D model of the modified torque tube on the retrofitted cooling tower beams" loading="lazy"></button><figcaption><strong>Modified design</strong> Torque tube on the retrofitted beams</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/tt-fem.jpg" data-title="FEM result · Max von Mises stress 149 MPa"><img src="certs/tt-fem.jpg" alt="SolidWorks FEM von Mises stress plot, max 149 MPa" loading="lazy"></button><figcaption><strong>FEM result</strong> Max von Mises stress 149 MPa, SF 1.14</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/tt-poster.jpg" data-title="Case study poster · Problem, method, FEM, BOM and fabrication plan"><img src="certs/tt-poster.jpg" alt="Case study poster summarising the torque tube modification" loading="lazy"></button><figcaption><strong>Case study poster</strong> Problem, method, FEM, BOM, fabrication plan</figcaption></figure>
+        </div>
+        <a class="doc-link" href="certs/Torque_Tube_Case_Study_Poster.pdf" target="_blank" rel="noopener">View case study poster (PDF) ↗</a>
+        <a class="doc-link" href="certs/Seminar_Slides_Star_Energy_2025.pdf" target="_blank" rel="noopener">Seminar slides (PDF) ↗</a>
         <p class="ph-h mono">ENGINEERING CALCULATIONS</p>
         <div class="calc-grid">
           <figure><button type="button" class="thumb" data-full="certs/se-turb-dcs.jpg" data-title="Turbine efficiency · Unit 1 &amp; 2 data from the DCS"><img src="certs/se-turb-dcs.jpg" alt="Turbine efficiency: Unit 1 &amp; 2 data from the DCS" loading="lazy"></button><figcaption><strong>Turbine efficiency</strong> Unit 1 &amp; 2 data from the DCS</figcaption></figure>
