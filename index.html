@@ -205,8 +205,8 @@ dialog.lb button{font:inherit;color:#fff;background:transparent;border:1px solid
 .ph-strip .thumb{padding:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--paper);cursor:zoom-in;aspect-ratio:3/4}
 .ph-strip.act{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin-top:14px}
 .ph-strip.act .thumb{aspect-ratio:4/3}
-.ph-strip.pa{grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:4px 0 12px}.ph-strip.pa .thumb{grid-column:span 2}.ph-strip.pa .thumb:nth-last-child(-n+2){grid-column:span 3;aspect-ratio:16/9}@media (max-width:700px){.ph-strip.pa{grid-template-columns:repeat(2,minmax(0,1fr))}.ph-strip.pa .thumb,.ph-strip.pa .thumb:nth-last-child(-n+2){grid-column:span 1;aspect-ratio:16/10}}
-.ph-strip.pa .thumb{aspect-ratio:16/10}
+.ph-strip.pa{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:4px 0 12px}
+.ph-strip.pa .thumb{aspect-ratio:16/9}
 .ph-strip.pa img{object-position:left top}
 .ph-strip.calc{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px}
 .ph-strip.calc .thumb{aspect-ratio:16/9;background:#fff}
@@ -282,6 +282,9 @@ section.s{position:relative}
 @media (max-width:760px){.lt{grid-template-columns:1fr}.lt-stamp{width:130px;height:130px;justify-self:start;font-size:.6rem}.lt-stamp b{font-size:1.2rem}}
 @media (prefers-reduced-motion:reduce){.lt-avail .dot{animation:none}.lt-h em::after{transition:none}}
 
+.calc-grid.sp-wide{grid-template-columns:repeat(2,minmax(0,1fr))}.calc-grid.sp-wide .thumb{aspect-ratio:16/9}.calc-grid.sp-wide img{object-fit:contain}@media (max-width:560px){.calc-grid.sp-wide{grid-template-columns:1fr}}
+.calc-grid.sp-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:901px){#prj-powerapps .ph-strip.pa{flex:1 1 auto;grid-auto-rows:1fr}#prj-powerapps .ph-strip.pa .thumb{aspect-ratio:auto;min-height:150px}}
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
 
@@ -563,11 +566,15 @@ section.s{position:relative}
           <li>Ran the same geometry, material, fixtures and loads in SolidWorks Simulation and ANSYS Mechanical (262,402 elements) so the results could be cross-checked.</li>
         </ul>
         <p><strong>Result:</strong> max von Mises stress of 13.98 MPa (SolidWorks) and 13.79 MPa (ANSYS) at the elbow, only 9% of the allowable stress. The two packages agreed within 1.7%, so the misalignment was accepted as structurally safe.</p>
-        <div class="calc-grid">
+        <div class="calc-grid sp-two">
           <figure><button type="button" class="thumb" data-full="certs/sp-model.jpg" data-title="Spool model · 2D drawing and 3D model"><img src="certs/sp-model.jpg" alt="Spool drawing and 3D model of the 8-inch spool" loading="lazy"></button><figcaption><strong>Spool model</strong> 2D drawing and 3D model</figcaption></figure>
           <figure><button type="button" class="thumb" data-full="certs/sp-mesh.jpg" data-title="Mesh · ANSYS mesh, 262,402 elements"><img src="certs/sp-mesh.jpg" alt="ANSYS mesh of the spool pipe" loading="lazy"></button><figcaption><strong>Mesh</strong> ANSYS mesh, 262,402 elements</figcaption></figure>
           <figure><button type="button" class="thumb" data-full="certs/sp-sw.jpg" data-title="SolidWorks result · Max 13.98 MPa at μs = 1"><img src="certs/sp-sw.jpg" alt="SolidWorks von Mises stress plot at the elbow" loading="lazy"></button><figcaption><strong>SolidWorks result</strong> Max 13.98 MPa at μs = 1</figcaption></figure>
           <figure><button type="button" class="thumb" data-full="certs/sp-ansys.jpg" data-title="ANSYS result · Max 13.79 MPa at μs = 1"><img src="certs/sp-ansys.jpg" alt="ANSYS von Mises stress plot at the elbow" loading="lazy"></button><figcaption><strong>ANSYS result</strong> Max 13.79 MPa at μs = 1</figcaption></figure>
+        </div>
+        <div class="calc-grid sp-wide">
+          <figure><button type="button" class="thumb" data-full="certs/sp-boundary.jpg" data-title="Boundary conditions · fixed support, spool mass 339.4 kg and the five sliding-force load cases"><img src="certs/sp-boundary.jpg" alt="Boundary condition slide: fixed support, spool mass breakdown and load table for friction 0.2 to 1.0" loading="lazy"></button><figcaption><strong>Boundary conditions</strong> Fixed support, 339.4 kg spool, F = W·μs + 100 N</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/sp-compare.jpg" data-title="Result comparison · SolidWorks vs ANSYS, stress ratio 2–9% of 160 MPa, difference 1.3–1.7%"><img src="certs/sp-compare.jpg" alt="Comparison table of von Mises stress, stress ratio and difference between SolidWorks and ANSYS for five load cases" loading="lazy"></button><figcaption><strong>SolidWorks vs ANSYS</strong> Stress ratio 2–9%, difference within 1.7%</figcaption></figure>
         </div>
         <div class="spec"><span class="chip">SolidWorks Simulation</span><span class="chip">ANSYS Mechanical</span><span class="chip">Static FEA</span><span class="chip">Hastelloy C-276</span><span class="chip">ASME PCC-1</span><span class="chip">ASME II Part D</span></div>
       </article>
