@@ -231,9 +231,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:14px 0 16px}.step{background:var(--sheet);border:1.5px solid var(--ink);box-shadow:4px 4px 0 var(--shadow);padding:14px 14px 12px;border-radius:var(--r)}.step .n{display:block;font-family:var(--f-display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--accent)}.step h4{margin:8px 0 6px;font-size:1rem}.step p{margin:0;font-size:.86rem;line-height:1.5;color:var(--ink-2,inherit)}@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
 .wide-fig .thumb,.wide-fig img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important;background:#fff}
 .fit-fig img{object-fit:contain!important;background:#fff}
+.bg-gears{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;color:var(--ink);opacity:.11}
+:root[data-theme="dark"] .bg-gears{opacity:.13}
+.bg-gears svg{position:absolute;overflow:visible}
+.bg-gears .g{transform-box:fill-box;transform-origin:center;animation:gspin var(--d,60s) linear infinite}
+.bg-gears .g.r{animation-direction:reverse}
+@keyframes gspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.bg-gears .g{animation:none}}
+@media (max-width:700px){.bg-gears{opacity:.06}}
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
 
+<div class="bg-gears" aria-hidden="true">
+  <svg id="gs1" style="right:-120px;top:70px" width="520" height="420"></svg>
+  <svg id="gs2" style="left:-150px;top:46%" width="420" height="460"></svg>
+  <svg id="gs3" style="right:4%;bottom:-140px" width="380" height="320"></svg>
+</div>
 <div id="app">
 <header class="top">
   <div class="wrap">
@@ -764,6 +777,36 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   })});
   document.getElementById('lb-close').addEventListener('click',function(){lb.close?lb.close():lb.removeAttribute('open')});
   lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+})();
+</script>
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  function gearPath(z,m){var r=z*m/2,ra=r+m,rf=r-1.25*m,d='',n=z*4;
+    for(var i=0;i<z;i++){var a=i*2*Math.PI/z,t=Math.PI/z;
+      var pts=[[rf,a-t*0.55],[ra,a-t*0.28],[ra,a+t*0.28],[rf,a+t*0.55],[rf,a+t*1.45]];
+      pts.forEach(function(p,k){var x=(p[0]*Math.cos(p[1])).toFixed(1),y=(p[0]*Math.sin(p[1])).toFixed(1);d+=(i===0&&k===0?'M':'L')+x+' '+y;});}
+    return d+'Z';}
+  function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e;}
+  function gear(svg,cx,cy,z,m,dur,rev,rot){
+    var r=z*m/2,g=el('g',{class:'g'+(rev?' r':''),style:'--d:'+dur+'s'},svg);
+    var inner=el('g',{transform:'translate('+cx+' '+cy+') rotate('+(rot*180/Math.PI).toFixed(2)+')',fill:'none',stroke:'currentColor','stroke-width':1.4},g);
+    el('path',{d:gearPath(z,m)},inner);
+    el('circle',{r:r,'stroke-dasharray':'10 4 2 4','stroke-width':.8},inner);
+    el('circle',{r:r*0.62},inner);
+    el('circle',{r:r*0.2},inner);
+    for(var i=0;i<5;i++){var a=i*2*Math.PI/5;el('circle',{cx:(r*0.41*Math.cos(a)).toFixed(1),cy:(r*0.41*Math.sin(a)).toFixed(1),r:r*0.1},inner);}
+    el('rect',{x:-r*0.05,y:-r*0.27,width:r*0.1,height:r*0.08},inner);
+    el('line',{x1:-r-2*m,y1:0,x2:r+2*m,y2:0,'stroke-dasharray':'14 4 2 4','stroke-width':.7},inner);
+    el('line',{x1:0,y1:-r-2*m,x2:0,y2:r+2*m,'stroke-dasharray':'14 4 2 4','stroke-width':.7},inner);
+  }
+  function pair(id,a,b,ang,m,base){var s=document.getElementById(id);if(!s)return;
+    var ra=a.z*m/2,rb=b.z*m/2,d=ra+rb;
+    gear(s,a.x,a.y,a.z,m,base,false,ang);
+    gear(s,a.x+d*Math.cos(ang),a.y+d*Math.sin(ang),b.z,m,base*b.z/a.z,true,ang+Math.PI-Math.PI/b.z);}
+  pair('gs1',{x:330,y:200,z:24},{z:14},Math.PI*0.78,12,90);
+  pair('gs2',{x:190,y:170,z:18},{z:12},Math.PI*0.38,11,70);
+  pair('gs3',{x:250,y:180,z:20},{z:11},Math.PI*1.15,10,80);
 })();
 </script>
 </body></html>
