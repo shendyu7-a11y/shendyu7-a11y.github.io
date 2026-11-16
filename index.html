@@ -31,7 +31,8 @@ body{transition:background-color .2s,color .2s}
 :root[data-theme="dark"] .calc-grid .thumb,:root[data-theme="dark"] .ph-strip.calc .thumb{border-color:var(--line)}
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body,#app{overflow-x:clip;max-width:100%}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
