@@ -312,6 +312,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <li>Track work orders in Odoo ERP (CMMS), support the PM schedule and keep the maintenance backlog visible.</li>
           <li>Lead the Mechanical Section daily meeting with technicians, officers, supervisors, assistant managers and the manager.</li>
           <li>Coordinate field readiness: permits, materials and manpower before each job starts.</li>
+          <li>Ran an FEA cross-check (SolidWorks and ANSYS) on a misaligned 8-inch spool pipe; max stress was 9% of allowable, so the spool was accepted. <a href="#prj-spool">See project</a></li>
           <li>Built the Daily Work Mechanical app (Power Apps, SharePoint, Power Automate) to replace a 500+ record Excel log, with role-based dashboards, an overtime calculator and automated report uploads. <a href="#prj-powerapps">See project</a></li>
         </ul>
         <figure class="proof"><button type="button" class="thumb" data-full="certs/maganghub-merak.jpg" data-title="MagangHub Kemnaker · PT Merak Chemicals Indonesia"><img src="certs/maganghub-merak.jpg" alt="MagangHub Kemnaker participant dashboard showing acceptance as Mechanical Intern at PT Merak Chemicals Indonesia, Batch 2 2026" loading="lazy"></button><figcaption class="mono">MagangHub Kemnaker · accepted as Mechanical Intern, Batch 2 2026 · click to enlarge</figcaption></figure>
@@ -411,10 +412,25 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     </div>
     <div class="projects">
       <article class="proj feature">
-        <div class="no"><span class="mono">PRJ-01 · Merak Chemicals · 2026</span><span class="mono">Static equipment</span></div>
-        <h3>Leak detection &amp; tube repair for a D-type water-tube boiler</h3>
-        <p>Benchmarked leak detection methods for the plant's steam boiler, then designed and sized 2-inch tube plugs for the steam and water drums, including re-rolled tube sizes and thermal behaviour. Assessed the expanded tube-to-tubesheet joints and set UT-based criteria for re-rolling. Packaged the work as a Management of Change (MOC) with calculation sheets and presented it in English.</p>
-        <div class="spec"><span class="chip">D-type boiler</span><span class="chip">2" tube plug</span><span class="chip">Tube-to-tubesheet</span><span class="chip">UT criteria</span><span class="chip">MOC</span><span class="chip">Calc sheets</span></div>
+        <div class="no"><span class="mono">PRJ-01 · Merak Chemicals · 2026</span><span class="mono">Static equipment · MOC</span></div>
+        <h3>Steam boiler tube leak: detection, plugging and re-expansion</h3>
+        <p>A D-type water-tube steam boiler (1,308 tubes) started leaking at the bottom, near the water drum. I worked on the repair engineering and packaged it as a Management of Change (MOC):</p>
+        <ul class="pts">
+          <li>Benchmarked leak detection: visual screening from inside the furnace, borescope inspection, and two inspection schemes (RFT wall-loss screening, or plugging tubes and filling from the steam drum to watch the water level). This located the leaking tube.</li>
+          <li>Measured the actual tube IDs (43.4–44.6 mm against 45 mm nominal) and checked the minimum wall thickness.</li>
+          <li>Designed 2-inch tapered tube plugs with drawings for the steam and water drums: carbon steel C-1020, self-locking 1:20 taper, 0.25 mm interference, sized from the measured IDs.</li>
+          <li>Checked thermal behaviour at 179 °C: plug and tube grow by the same 0.18%, so the plug neither loosens nor pushes out.</li>
+          <li>After a hydrotest to 8.5 kg/cm² showed small leaks at the rolled joints, set re-expansion targets from the tubesheet hole and wall thickness, checked the actual expansion was within standard, and re-expanded 13 tubes.</li>
+          <li>Sized hydrotest blind plates to ASME Section VIII Div. 1 UG-34 and wrote the risk assessment.</li>
+        </ul>
+        <p><strong>Result:</strong> the leaking tube was found and plugged, the leaking rolled joints were re-expanded within standard, and the whole repair was documented as an MOC with calculation sheets, drawings and English presentations.</p>
+        <div class="calc-grid">
+          <figure><button type="button" class="thumb" data-full="certs/moc-plug.jpg" data-title="Plug drawing · 2-inch taper plug, 1:20 self-locking"><img src="certs/moc-plug.jpg" alt="Drawing of the 2-inch tapered tube plug with size table" loading="lazy"></button><figcaption><strong>Plug drawing</strong> 2-inch taper plug, 1:20 self-locking</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/moc-thermal.jpg" data-title="Thermal check · Plug and tube grow together at 179 °C"><img src="certs/moc-thermal.jpg" alt="Diagram of plug and tube thermal expansion at 179 °C" loading="lazy"></button><figcaption><strong>Thermal check</strong> Plug and tube grow together at 179 °C</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/moc-installed.jpg" data-title="Installed plugs · Plugs driven into the tube ends"><img src="certs/moc-installed.jpg" alt="Photos of installed tube plugs in the drum" loading="lazy"></button><figcaption><strong>Installed plugs</strong> Plugs driven into the tube ends</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/moc-hydro.jpg" data-title="Hydrotest · Pressure steps up to 9 kg/cm²"><img src="certs/moc-hydro.jpg" alt="Hydrotest pressure profile chart" loading="lazy"></button><figcaption><strong>Hydrotest</strong> Pressure steps up to 9 kg/cm²</figcaption></figure>
+        </div>
+        <div class="spec"><span class="chip">D-type boiler</span><span class="chip">Borescope</span><span class="chip">Tapered tube plug</span><span class="chip">Tube expansion</span><span class="chip">Hydrotest</span><span class="chip">ASME VIII UG-34</span><span class="chip">MOC</span></div>
       </article>
       <article class="proj feature" id="prj-powerapps" style="scroll-margin-top:90px">
         <div class="no"><span class="mono">PRJ-02 · Merak Chemicals · 2026</span><span class="mono">Digital maintenance</span></div>
@@ -436,8 +452,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <p><strong>Result:</strong> one reliable place to record daily work, with less risk of lost data.</p>
         <div class="spec"><span class="chip">Power Apps (Canvas)</span><span class="chip">Power Automate</span><span class="chip">SharePoint Online</span><span class="chip">Excel/VBA</span></div>
       </article>
+      <article class="proj feature" id="prj-spool" style="scroll-margin-top:90px">
+        <div class="no"><span class="mono">PRJ-03 · Merak Chemicals · 2026</span><span class="mono">Piping · FEA</span></div>
+        <h3>FEA of a misaligned spool pipe: SolidWorks vs ANSYS cross-check</h3>
+        <p>During a pre-startup safety review, flange alignment checks to ASME PCC-1 found an 8-inch Hastelloy C-276 spool outside the allowable misalignment limits before bolting. Caesar II could not model this case, so I ran the FEA in two packages to check whether pulling the spool into line would overstress it:</p>
+        <ul class="pts">
+          <li>Built the 3D model from the spool drawing: 8-inch pipe, two 90° elbows and two flanges, about 339 kg.</li>
+          <li>Took the allowable stress for C-276 from ASME Section II Part D: 160 MPa at 40 °C (148.6 MPa at the 315 °C design temperature).</li>
+          <li>Set five load cases from the force needed to slide the spool, F = W·μs + 100 N, for friction coefficients 0.2 to 1.0 (765 to 3,426 N).</li>
+          <li>Ran the same geometry, material, fixtures and loads in SolidWorks Simulation and ANSYS Mechanical (262,402 elements) so the results could be cross-checked.</li>
+        </ul>
+        <p><strong>Result:</strong> max von Mises stress of 13.98 MPa (SolidWorks) and 13.79 MPa (ANSYS) at the elbow, only 9% of the allowable stress. The two packages agreed within 1.7%, so the misalignment was accepted as structurally safe.</p>
+        <div class="calc-grid">
+          <figure><button type="button" class="thumb" data-full="certs/sp-model.jpg" data-title="Spool model · 2D drawing and 3D model"><img src="certs/sp-model.jpg" alt="Spool drawing and 3D model of the 8-inch spool" loading="lazy"></button><figcaption><strong>Spool model</strong> 2D drawing and 3D model</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/sp-mesh.jpg" data-title="Mesh · ANSYS mesh, 262,402 elements"><img src="certs/sp-mesh.jpg" alt="ANSYS mesh of the spool pipe" loading="lazy"></button><figcaption><strong>Mesh</strong> ANSYS mesh, 262,402 elements</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/sp-sw.jpg" data-title="SolidWorks result · Max 13.98 MPa at μs = 1"><img src="certs/sp-sw.jpg" alt="SolidWorks von Mises stress plot at the elbow" loading="lazy"></button><figcaption><strong>SolidWorks result</strong> Max 13.98 MPa at μs = 1</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/sp-ansys.jpg" data-title="ANSYS result · Max 13.79 MPa at μs = 1"><img src="certs/sp-ansys.jpg" alt="ANSYS von Mises stress plot at the elbow" loading="lazy"></button><figcaption><strong>ANSYS result</strong> Max 13.79 MPa at μs = 1</figcaption></figure>
+        </div>
+        <div class="spec"><span class="chip">SolidWorks Simulation</span><span class="chip">ANSYS Mechanical</span><span class="chip">Static FEA</span><span class="chip">Hastelloy C-276</span><span class="chip">ASME PCC-1</span><span class="chip">ASME II Part D</span></div>
+      </article>
       <article class="proj">
-        <div class="no"><span class="mono">PRJ-03 · Polban · 2026</span><span class="mono">Final project</span></div>
+        <div class="no"><span class="mono">PRJ-04 · Polban · 2026</span><span class="mono">Final project</span></div>
         <h3>Plastic waste melting machine for paving blocks</h3>
         <button type="button" class="thumb poster-thumb" data-full="certs/poster-ta.jpg" data-title="Final project poster · Plastic waste melting machine"><img src="certs/poster-ta.jpg" alt="Final project poster: plastic waste melting machine for paving blocks" loading="lazy"></button>
         <p>Designed and built a machine that melts low-value, non-recyclable plastic (multilayer sachets, LDPE, HDPE, PP) into paving blocks. It runs on a 1 HP motor with a 1:100 gearbox and an LPG burner.</p>
@@ -446,7 +481,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <a class="doc-link" href="certs/TA_Defense_Slides_Plastic_Melting_Machine.pdf" target="_blank" rel="noopener">Final project defense slides (PDF, 15 slides) ↗</a>
       </article>
       <article class="proj">
-        <div class="no"><span class="mono">PRJ-04 · Star Energy · 2025</span><span class="mono">Reliability · Design</span></div>
+        <div class="no"><span class="mono">PRJ-05 · Star Energy · 2025</span><span class="mono">Reliability · Design</span></div>
         <h3>Backup gearbox torque tube for the cooling tower retrofit</h3>
         <div class="pair"><button type="button" class="thumb poster-thumb" data-full="certs/tt-installed.jpg" data-title="Modified torque tube on the retrofit structure (SolidWorks)"><img src="certs/tt-installed.jpg" alt="3D model of the modified torque tube on the retrofitted cooling tower beams" loading="lazy"></button><button type="button" class="thumb poster-thumb" data-full="certs/tt-fem.jpg" data-title="FEM von Mises stress, max 149 MPa"><img src="certs/tt-fem.jpg" alt="SolidWorks FEM von Mises stress plot, max 149 MPa" loading="lazy"></button></div>
         <p>The new cooling tower gearboxes on Units 1 &amp; 2 kept overheating, so the old gearbox was kept as a backup, but its torque tube no longer fit the retrofitted structure. I redesigned it in 3D and checked it with FEM: max von Mises stress of 149 MPa against a 170 MPa yield for SS 316L (safety factor 1.14), which is acceptable as a short-term mitigation, with a fatigue review recommended for long-term use. I then produced the BOM, manufacturing drawings and a three-phase fabrication plan covering procurement, welding with NDT, and final assembly with QC.</p>
@@ -454,7 +489,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <div class="spec"><span class="chip">SolidWorks</span><span class="chip">FEM</span><span class="chip">SS 316L</span><span class="chip">BOM</span><span class="chip">Fabrication plan</span></div>
       </article>
       <article class="proj feature">
-        <div class="no"><span class="mono">PRJ-05 · Polban · 2024</span><span class="mono">Robotics · Mechatronics</span></div>
+        <div class="no"><span class="mono">PRJ-06 · Polban · 2024</span><span class="mono">Robotics · Mechatronics</span></div>
         <h3>2-axis drawing robot arm</h3>
         <p>Course project for Robotics: a 2-degree-of-freedom robot arm that draws a triangle on its own. In the team, I designed the arm structure in SolidWorks for range of motion and stability, and:</p>
         <ul class="pts">
@@ -476,7 +511,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <div class="spec"><span class="chip">SolidWorks</span><span class="chip">MATLAB</span><span class="chip">Inverse kinematics</span><span class="chip">Arduino (C/C++)</span><span class="chip">Servo motors</span><span class="chip">3D printing</span></div>
       </article>
       <article class="proj">
-        <div class="no"><span class="mono">PRJ-06 · Polban · 2025</span><span class="mono">Maintenance practicum</span></div>
+        <div class="no"><span class="mono">PRJ-07 · Polban · 2025</span><span class="mono">Maintenance practicum</span></div>
         <h3>Journal bearing assembly, disassembly and clearance check</h3>
         <p>Hands-on practicum for the Mechanical Maintenance Engineering course. I took apart and reassembled a journal bearing set, measured the shaft, housing and bearing, and checked the fit:</p>
         <ul class="pts">
@@ -493,7 +528,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <div class="spec"><span class="chip">Journal bearing</span><span class="chip">Feeler gauge</span><span class="chip">Prussian blue</span><span class="chip">Clearance check</span><span class="chip">Alignment</span></div>
       </article>
       <article class="proj">
-        <div class="no"><span class="mono">PRJ-07 · Polban · 2024</span><span class="mono">Design · FEA</span></div>
+        <div class="no"><span class="mono">PRJ-08 · Polban · 2024</span><span class="mono">Design · FEA</span></div>
         <h3>Design and FEA validation of a motorcycle footstep</h3>
         <p>Modelled a motorcycle footstep in SolidWorks from scratch, with function and manufacturability in mind, then checked it with a static FEA in AISI 304 stainless steel: fixed at the mounting point, with a static load on the body to represent a rider's weight.</p>
         <ul class="pts">
