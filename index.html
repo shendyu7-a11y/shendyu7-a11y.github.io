@@ -221,11 +221,11 @@ dialog.lb button{font:inherit;color:#fff;background:transparent;border:1px solid
 .contact{background:var(--ink);color:var(--paper);border-bottom:0!important}
 .contact .sh h2{color:var(--paper)}
 .contact .sh p,.contact .mono{color:color-mix(in srgb,var(--paper) 70%,var(--ink))}
-.clist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:color-mix(in srgb,var(--paper) 22%,var(--ink));border:1px solid color-mix(in srgb,var(--paper) 22%,var(--ink))}
+.clist{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:color-mix(in srgb,var(--paper) 22%,var(--ink));border:1px solid color-mix(in srgb,var(--paper) 22%,var(--ink))}
 .ci{background:var(--ink);padding:20px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .ci a,.ci span.val{font-weight:600;font-size:1.02rem;word-break:break-word;text-decoration-color:var(--accent);text-underline-offset:4px}
 .copy{align-self:flex-start;margin-top:4px;font:500 .7rem var(--f-mono);letter-spacing:.05em;text-transform:uppercase;padding:4px 9px;background:transparent;border:1px solid color-mix(in srgb,var(--paper) 40%,var(--ink));color:var(--paper);border-radius:2px;cursor:pointer}
-@media (max-width:760px){.clist{grid-template-columns:1fr}}
+@media (max-width:1100px){.clist{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (max-width:760px){.clist{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:560px){.clist{grid-template-columns:1fr}}
 footer{background:var(--ink);color:color-mix(in srgb,var(--paper) 60%,var(--ink))}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid color-mix(in srgb,var(--paper) 18%,var(--ink));font-size:.85rem}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:14px 0 16px}.step{background:var(--sheet);border:1.5px solid var(--ink);box-shadow:4px 4px 0 var(--shadow);padding:14px 14px 12px;border-radius:var(--r)}.step .n{display:block;font-family:var(--f-display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--accent)}.step h4{margin:8px 0 6px;font-size:1rem}.step p{margin:0;font-size:.86rem;line-height:1.5;color:var(--ink-2,inherit)}@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
@@ -254,6 +254,31 @@ section.s{position:relative}
 :root[data-theme="dark"] .dwg-tb{opacity:.4}
 @media (max-width:1180px){.sec-art{display:none}}
 @media (max-width:1380px){.dwg-tb{display:none}}
+.contact{position:relative;overflow:hidden;background-image:linear-gradient(color-mix(in srgb,var(--paper) 6%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--paper) 6%,transparent) 1px,transparent 1px);background-size:28px 28px}
+.lt{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center;margin-bottom:40px}
+.lt-avail{display:inline-flex;align-items:center;gap:10px;margin:14px 0 18px;padding:6px 14px;border:1px solid color-mix(in srgb,var(--paper) 30%,var(--ink));border-radius:999px;font:500 .78rem var(--f-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--paper)}
+.lt-avail .dot{width:9px;height:9px;border-radius:50%;background:#2fbf71;box-shadow:0 0 0 0 rgba(47,191,113,.6);animation:ltpulse 2s infinite}
+@keyframes ltpulse{70%{box-shadow:0 0 0 10px rgba(47,191,113,0)}100%{box-shadow:0 0 0 0 rgba(47,191,113,0)}}
+.lt-h{font-family:var(--f-display);font-size:clamp(2.2rem,5.2vw,4.2rem);line-height:1.02;margin:0 0 18px;color:var(--paper);text-transform:none;letter-spacing:-.01em;max-width:15ch}
+.lt-h em{font-style:normal;color:var(--accent);position:relative;white-space:nowrap}
+.lt-h em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.09em;background:var(--accent);transform-origin:left;transform:scaleX(0);transition:transform .8s .2s}
+.contact.in .lt-h em::after{transform:scaleX(1)}
+.lt-sub{max-width:60ch;color:color-mix(in srgb,var(--paper) 75%,var(--ink));margin:0 0 26px}
+.lt-cta{display:flex;flex-wrap:wrap;gap:14px}
+.lt-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font-weight:700;text-decoration:none;color:var(--paper);border:1.5px solid var(--paper);border-radius:2px;transition:transform .15s,box-shadow .15s,background .15s}
+.lt-btn:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--accent)}
+.lt-btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
+.lt-btn.main:hover{box-shadow:5px 5px 0 var(--paper)}
+.lt-btn span{transition:transform .15s}.lt-btn:hover span{transform:translateX(4px)}
+.lt-stamp{width:180px;height:180px;border:3px double var(--accent);border-radius:50%;display:grid;place-content:center;text-align:center;color:var(--accent);transform:rotate(-12deg);font-family:var(--f-mono);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;gap:4px;opacity:.9}
+.lt-stamp b{font-family:var(--f-display);font-size:1.7rem;letter-spacing:.04em;border-block:2px solid var(--accent);padding:4px 6px}
+.ci{transition:background .15s}
+.ci:hover{background:color-mix(in srgb,var(--paper) 7%,var(--ink))}
+.ci .ico{width:38px;height:38px;display:grid;place-items:center;border:1.5px solid var(--accent);border-radius:2px;margin-bottom:8px;color:var(--accent)}
+.ci .ico svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:760px){.lt{grid-template-columns:1fr}.lt-stamp{width:130px;height:130px;justify-self:start;font-size:.6rem}.lt-stamp b{font-size:1.2rem}}
+@media (prefers-reduced-motion:reduce){.lt-avail .dot{animation:none}.lt-h em::after{transition:none}}
+@media (min-width:1101px){.clist .ci{padding:18px 16px}.clist .ci a{font-size:.88rem;word-break:normal;overflow-wrap:anywhere}}
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
 
@@ -796,16 +821,25 @@ section.s{position:relative}
 
 <section class="s contact" id="contact">
   <div class="wrap">
-    <div class="sh">
-      <span class="mono">Section H</span>
-      <div><h2>Let's talk</h2>
-      <p>Looking for roles in maintenance, reliability, manufacturing, energy and petrochemical plants. Open to placement anywhere in Indonesia.</p></div>
+    <div class="lt">
+      <div class="lt-copy">
+        <span class="mono">Section H · Let's talk</span>
+        <p class="lt-avail"><span class="dot"></span>Available now · open to placement anywhere in Indonesia</p>
+        <h2 class="lt-h">Need someone to keep your plant <em>running</em>?</h2>
+        <p class="lt-sub">I'm looking for full-time roles in maintenance, reliability and project engineering at energy, petrochemical and manufacturing plants. Send me a message and let's talk about how I can help your team.</p>
+        <div class="lt-cta">
+          <a class="lt-btn main" href="mailto:shendyu7@gmail.com?subject=Opportunity%20for%20Aa%20Shendi%20Yusuf">Email me <span aria-hidden="true">→</span></a>
+          <a class="lt-btn" href="CV_Aa_Shendi_Yusuf.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+      <div class="lt-stamp" aria-hidden="true"><span>Ready</span><b>For Hire</b><span>Rev. A · 2026</span></div>
     </div>
     <div class="clist">
-      <div class="ci"><span class="mono">Email</span><a href="mailto:shendyu7@gmail.com" id="email">shendyu7@gmail.com</a><button class="copy" type="button" id="copy-email" data-copy="shendyu7@gmail.com">Copy</button></div>
-      <div class="ci"><span class="mono">LinkedIn</span><a href="https://www.linkedin.com/in/aashendiyusuf" target="_blank" rel="noopener">linkedin.com/in/aashendiyusuf</a></div>
-      <div class="ci"><span class="mono">Portfolio</span><a href="https://bit.ly/PortofolioAaShendi" target="_blank" rel="noopener">bit.ly/PortofolioAaShendi</a><button class="copy" type="button" data-copy="https://bit.ly/PortofolioAaShendi">Copy</button></div>
-      <div class="ci"><span class="mono">CV</span><a href="CV_Aa_Shendi_Yusuf.pdf" target="_blank" rel="noopener">Download PDF</a></div>
+      <div class="ci"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span><span class="mono">Email</span><a href="mailto:shendyu7@gmail.com" id="email">shendyu7@gmail.com</a><button class="copy" type="button" id="copy-email" data-copy="shendyu7@gmail.com">Copy</button></div>
+      <div class="ci"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></span><span class="mono">LinkedIn</span><a href="https://www.linkedin.com/in/aashendiyusuf" target="_blank" rel="noopener">in/aashendiyusuf</a></div>
+      <div class="ci"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><span class="mono">Portfolio</span><a href="https://bit.ly/PortofolioAaShendi" target="_blank" rel="noopener">bit.ly/PortofolioAaShendi</a><button class="copy" type="button" data-copy="https://bit.ly/PortofolioAaShendi">Copy</button></div>
+      <div class="ci"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M12 11v6M9 14l3 3 3-3"/></svg></span><span class="mono">CV</span><a href="CV_Aa_Shendi_Yusuf.pdf" target="_blank" rel="noopener">Download PDF</a></div>
+      <div class="ci"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg></span><span class="mono">Instagram</span><a href="https://www.instagram.com/_shndysfff/" target="_blank" rel="noopener">@_shndysfff</a></div>
     </div>
   </div>
 </section>
@@ -882,5 +916,9 @@ section.s{position:relative}
 if(!el||!('IntersectionObserver' in window))return;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var n=ids.indexOf(e.target.id);if(n>=0)el.textContent=(n+1)+' / 9';}});},{rootMargin:'-45% 0px -50% 0px'});
 ids.forEach(function(id){var t=document.getElementById(id);if(t)io.observe(t);});})();
+</script>
+<script>
+(function(){var c=document.getElementById('contact');if(!c)return;if(!('IntersectionObserver' in window)){c.classList.add('in');return;}
+new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){c.classList.add('in');o.disconnect();}});},{threshold:.3}).observe(c);})();
 </script>
 </body></html>
