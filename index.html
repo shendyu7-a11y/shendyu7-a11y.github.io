@@ -239,6 +239,21 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 @keyframes gspin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.bg-gears .g{animation:none}}
 @media (max-width:700px){.bg-gears{opacity:.06}}
+section.s{position:relative}
+.sec-art{position:absolute;right:max(24px,calc((100vw - 1120px)/2 + 8px));top:14px;width:170px;height:auto;z-index:-1;pointer-events:none;color:var(--ink);opacity:.14;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.sec-art .cl{stroke-dasharray:12 4 2 4;stroke-width:.8}
+.sec-art .dim{stroke-width:.8}
+.sec-art text{fill:currentColor;stroke:none;font-family:var(--f-mono);font-size:10px;letter-spacing:.05em}
+:root[data-theme="dark"] .sec-art{opacity:.18}
+.dwg-tb{position:fixed;left:12px;bottom:12px;z-index:-1;pointer-events:none;color:var(--ink);opacity:.32;font-family:var(--f-mono);font-size:8px;letter-spacing:.05em;max-width:140px;text-transform:uppercase;border:1.2px solid currentColor;display:grid;grid-template-columns:1fr 1fr;background:transparent}
+.dwg-tb div{border-right:1px solid currentColor;border-bottom:1px solid currentColor;padding:2px 5px;white-space:nowrap}
+.dwg-tb div:nth-child(odd):not(.t){border-right:0}
+.dwg-tb div:nth-last-child(-n+2){border-bottom:0}
+.dwg-tb b{display:block;font-weight:700;font-size:9px;letter-spacing:.03em}
+.dwg-tb .t{grid-column:span 2;font-size:8.5px;border-right:0!important}
+:root[data-theme="dark"] .dwg-tb{opacity:.4}
+@media (max-width:1180px){.sec-art{display:none}}
+@media (max-width:1380px){.dwg-tb{display:none}}
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
 
@@ -246,6 +261,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   <svg id="gs1" style="right:-120px;top:70px" width="520" height="420"></svg>
   <svg id="gs2" style="left:-150px;top:46%" width="420" height="460"></svg>
   <svg id="gs3" style="right:4%;bottom:-140px" width="380" height="320"></svg>
+</div>
+<div class="dwg-tb" aria-hidden="true">
+  <div class="t"><b>Engineering Portfolio</b>Aa Shendi Yusuf, S.Tr.T</div>
+  <div>Drawn<b>A.S. Yusuf</b></div><div>Date<b>2026</b></div><div>Scale<b>1:1</b></div><div>Rev<b>A</b></div>
+  <div>Dwg No.<b>ASY-001</b></div><div>Sheet<b id="tb-sheet">1 / 9</b></div>
 </div>
 <div id="app">
 <header class="top">
@@ -312,6 +332,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 </div>
 
 <section class="s" id="experience">
+<svg class="sec-art" viewBox="0 0 230 200" aria-hidden="true">
+<path d="M115 100 m-46 0 a46 46 0 1 0 92 0 a46 46 0 1 0 -92 0"/>
+<path d="M115 100 m-30 0 a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0"/>
+<path d="M161 100 C161 62 140 40 108 40 L150 40 L150 22"/>
+<rect x="138" y="12" width="24" height="10"/>
+<path d="M105 100 h20 M115 90 v20"/>
+<path d="M69 100 h-30 M39 88 v24 M33 88 v24"/>
+<path d="M70 160 h90 l8 14 h-106 z"/>
+<path d="M95 146 v14 M135 146 v14"/>
+<path class="cl" d="M20 100 h190 M115 6 v176"/>
+<text x="20" y="196">CENTRIFUGAL PUMP · SIDE VIEW</text>
+</svg>
   <div class="wrap">
     <div class="sh">
       <span class="mono">Section A</span>
@@ -422,6 +454,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 </section>
 
 <section class="s" id="projects">
+<svg class="sec-art" viewBox="0 0 230 200" aria-hidden="true">
+<circle cx="80" cy="96" r="62"/><circle cx="80" cy="96" r="24"/><circle cx="80" cy="96" r="40" class="cl"/>
+<g><circle cx="120.0" cy="96.0" r="6"/><circle cx="108.3" cy="124.3" r="6"/><circle cx="80.0" cy="136.0" r="6"/><circle cx="51.7" cy="124.3" r="6"/><circle cx="40.0" cy="96.0" r="6"/><circle cx="51.7" cy="67.7" r="6"/><circle cx="80.0" cy="56.0" r="6"/><circle cx="108.3" cy="67.7" r="6"/></g>
+<path class="cl" d="M8 96 h150 M80 24 v146"/>
+<path d="M170 40 h44 M170 152 h44 M176 40 v112 M208 40 v112"/>
+<path d="M180 40 v-14 l12 -10 l12 10 v14"/>
+<path class="dim" d="M222 40 v112 M218 44 l4 -4 l4 4 M218 148 l4 4 l4 -4"/>
+<text x="8" y="196">FLANGE 8 HOLES · TUBE PLUG</text>
+</svg>
   <div class="wrap">
     <div class="sh">
       <span class="mono">Section B</span>
@@ -573,6 +614,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 </section>
 
 <section class="s" id="skills">
+<svg class="sec-art" viewBox="0 0 230 200" aria-hidden="true">
+<path d="M14 70 h200 v22 h-200 z"/>
+<path d="M14 70 v-50 h18 v50 M14 92 v70 l18 14 v-84"/>
+<path d="M120 60 h36 v42 h-36 z M120 102 v62 l14 12 v-74"/>
+<path d="M156 70 v-46 h-8 v46"/>
+<path d="M40 92 v11"/><path d="M48 92 v6"/><path d="M56 92 v6"/><path d="M64 92 v6"/><path d="M72 92 v6"/><path d="M80 92 v11"/><path d="M88 92 v6"/><path d="M96 92 v6"/><path d="M104 92 v6"/><path d="M112 92 v6"/><path d="M120 92 v11"/><path d="M128 92 v6"/><path d="M136 92 v6"/><path d="M144 92 v6"/><path d="M152 92 v6"/><path d="M160 92 v11"/><path d="M168 92 v6"/><path d="M176 92 v6"/><path d="M184 92 v6"/><path d="M192 92 v6"/><path d="M200 92 v11"/><path d="M208 92 v6"/>
+<path d="M125 92 v-6 M130 92 v-4 M135 92 v-6 M140 92 v-4 M145 92 v-6 M150 92 v-4"/>
+<text x="14" y="196">VERNIER CALIPER 0–150 MM</text>
+</svg>
   <div class="wrap">
     <div class="sh">
       <span class="mono">Section C</span>
@@ -590,6 +640,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 </section>
 
 <section class="s" id="certifications">
+<svg class="sec-art" viewBox="0 0 230 200" aria-hidden="true">
+<path d="M20 120 h120"/>
+<path d="M140 120 l60 -60 h20"/>
+<path d="M140 120 l12 -4 l-4 12 z"/>
+<path d="M70 120 l14 -16 v16"/>
+<text x="92" y="114">6</text>
+<path d="M40 150 h40 v-30 M40 150 l20 20 l20 -20"/>
+<path class="cl" d="M20 120 h-10"/>
+<text x="20" y="196">WELD SYMBOL · FILLET 6 MM</text>
+</svg>
   <div class="wrap">
     <div class="sh">
       <span class="mono">Section D</span>
@@ -607,6 +667,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 </section>
 
 <section class="s" id="education">
+<svg class="sec-art" viewBox="0 0 230 200" aria-hidden="true">
+<path d="M115 30 l90 36 l-90 36 l-90 -36 z"/>
+<path d="M60 82 v38 c0 18 110 18 110 0 v-38"/>
+<path d="M205 66 v52"/><path d="M199 118 h12 l-6 22 z"/>
+<path class="cl" d="M115 14 v140 M20 66 h200"/>
+<text x="20" y="196">S.TR.T · POLBAN 2026</text>
+</svg>
   <div class="wrap">
     <div class="sh">
       <span class="mono">Section E</span>
@@ -737,6 +804,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     <div class="clist">
       <div class="ci"><span class="mono">Email</span><a href="mailto:shendyu7@gmail.com" id="email">shendyu7@gmail.com</a><button class="copy" type="button" id="copy-email" data-copy="shendyu7@gmail.com">Copy</button></div>
       <div class="ci"><span class="mono">LinkedIn</span><a href="https://www.linkedin.com/in/aashendiyusuf" target="_blank" rel="noopener">linkedin.com/in/aashendiyusuf</a></div>
+      <div class="ci"><span class="mono">Portfolio</span><a href="https://bit.ly/PortofolioAaShendi" target="_blank" rel="noopener">bit.ly/PortofolioAaShendi</a><button class="copy" type="button" data-copy="https://bit.ly/PortofolioAaShendi">Copy</button></div>
       <div class="ci"><span class="mono">CV</span><a href="CV_Aa_Shendi_Yusuf.pdf" target="_blank" rel="noopener">Download PDF</a></div>
     </div>
   </div>
@@ -808,5 +876,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   pair('gs2',{x:190,y:170,z:18},{z:12},Math.PI*0.38,11,70);
   pair('gs3',{x:250,y:180,z:20},{z:11},Math.PI*1.15,10,80);
 })();
+</script>
+<script>
+(function(){var ids=['top','experience','projects','skills','certifications','education','awards','leadership','contact'],el=document.getElementById('tb-sheet');
+if(!el||!('IntersectionObserver' in window))return;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var n=ids.indexOf(e.target.id);if(n>=0)el.textContent=(n+1)+' / 9';}});},{rootMargin:'-45% 0px -50% 0px'});
+ids.forEach(function(id){var t=document.getElementById(id);if(t)io.observe(t);});})();
 </script>
 </body></html>
