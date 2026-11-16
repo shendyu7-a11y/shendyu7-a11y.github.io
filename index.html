@@ -1,5 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2713%27 fill=%27none%27 stroke=%27%2316212B%27 stroke-width=%273%27/%3E%3Cpath d=%27M16 0v32M0 16h32%27 stroke=%27%23C2410C%27 stroke-width=%272%27/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
 <title>Aa Shendi Yusuf</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Aa Shendi Yusuf – Mechanical Engineer (D4 Polban) focused on maintenance, reliability and project engineering in energy and petrochemical plants.">
@@ -14,8 +15,20 @@
   --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
   --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
-  --r:4px; --max:1120px; color-scheme:light;
+  --r:4px; --max:1120px; color-scheme:light; --shadow:#16212B;
 }
+:root[data-theme="dark"]{
+  --paper:#0E151C; --sheet:#16202A; --ink:#E7ECEF; --ink-2:#A5B1BC; --line:#2B3844; --grid:rgba(231,236,239,.05);
+  --accent:#F06A2A; --accent-ink:#FFFFFF; --accent-soft:#3B2216; --shadow:#000000; color-scheme:dark;
+}
+body{transition:background-color .2s,color .2s}
+.theme-btn{flex:none;display:inline-grid;place-items:center;width:42px;height:42px;border-radius:999px;border:1.5px solid var(--ink);background:var(--sheet);color:var(--ink);cursor:pointer;box-shadow:3px 3px 0 var(--shadow);transition:transform .15s,box-shadow .15s,background .15s}
+.theme-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--accent);color:var(--accent);border-color:var(--accent)}
+.theme-btn svg{width:20px;height:20px}
+.theme-btn .moon{display:none}
+:root[data-theme="dark"] .theme-btn .sun{display:none}
+:root[data-theme="dark"] .theme-btn .moon{display:block}
+:root[data-theme="dark"] .calc-grid .thumb,:root[data-theme="dark"] .ph-strip.calc .thumb{border-color:var(--line)}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -36,14 +49,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .brand{font-family:var(--f-display);font-weight:800;font-stretch:80%;font-size:1.15rem;text-decoration:none;letter-spacing:.01em;white-space:nowrap}
 .brand b{color:var(--accent)}
 .nav{display:flex;gap:8px;margin-left:auto}
-.nav a{text-decoration:none;font-family:var(--f-display);font-stretch:88%;font-weight:700;font-size:1.05rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);padding:9px 16px;border:1.5px solid var(--ink);border-radius:999px;background:var(--sheet);white-space:nowrap;box-shadow:3px 3px 0 var(--ink);transition:background .15s,color .15s,border-color .15s,transform .15s,box-shadow .15s}
+.nav a{text-decoration:none;font-family:var(--f-display);font-stretch:88%;font-weight:700;font-size:1.05rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);padding:9px 16px;border:1.5px solid var(--ink);border-radius:999px;background:var(--sheet);white-space:nowrap;box-shadow:3px 3px 0 var(--shadow);transition:background .15s,color .15s,border-color .15s,transform .15s,box-shadow .15s}
 .nav a:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--accent)}
-.nav a:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
-.nav a.active{background:var(--accent);border-color:var(--ink);color:var(--accent-ink);box-shadow:3px 3px 0 var(--ink)}
-.nav a.active:hover{color:var(--accent-ink);background:var(--accent);box-shadow:5px 5px 0 var(--ink)}
+.nav a:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--shadow)}
+.nav a.active{background:var(--accent);border-color:var(--ink);color:var(--accent-ink);box-shadow:3px 3px 0 var(--shadow)}
+.nav a.active:hover{color:var(--accent-ink);background:var(--accent);box-shadow:5px 5px 0 var(--shadow)}
 .nav a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media (max-width:1320px){.nav a{font-size:.95rem;padding:8px 12px}}
-@media (max-width:900px){.top .wrap{flex-wrap:wrap;gap:10px}.nav{margin-left:0;width:100%;overflow-x:auto;padding:4px 6px 8px 2px;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}}
+@media (max-width:900px){.theme-btn{order:2;margin-left:auto;width:38px;height:38px}.nav{order:3}.top .wrap{flex-wrap:wrap;gap:10px}.nav{margin-left:0;width:100%;overflow-x:auto;padding:4px 6px 8px 2px;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}}
 /* hero */
 .hero{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;border-bottom:1px solid var(--line)}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;padding-block:72px 64px;align-items:end}
@@ -232,6 +245,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <a href="#leadership">Leadership</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button type="button" class="theme-btn" id="theme-btn" aria-label="Switch to dark mode" title="Dark / light mode">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+    </button>
   </div>
 </header>
 
@@ -669,6 +686,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,sel)}else sel();
     });
   });
+  var root=document.documentElement, tb=document.getElementById('theme-btn');
+  var applyTheme=function(t){if(t==='dark'){root.setAttribute('data-theme','dark')}else{root.setAttribute('data-theme','light')}tb.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode')};
+  var saved=null; try{saved=localStorage.getItem('theme')}catch(e){}
+  applyTheme(saved==='dark'?'dark':'light');
+  tb.addEventListener('click',function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';applyTheme(t);try{localStorage.setItem('theme',t)}catch(e){}});
   var navLinks=[].slice.call(document.querySelectorAll('.nav a'));
   if('IntersectionObserver' in window){
     var lockUntil=0;
