@@ -458,6 +458,38 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         </div>
         <div class="spec"><span class="chip">SolidWorks</span><span class="chip">MATLAB</span><span class="chip">Inverse kinematics</span><span class="chip">Arduino (C/C++)</span><span class="chip">Servo motors</span><span class="chip">3D printing</span></div>
       </article>
+      <article class="proj">
+        <div class="no"><span class="mono">PRJ-06 · Polban · 2025</span><span class="mono">Maintenance practicum</span></div>
+        <h3>Journal bearing assembly, disassembly and clearance check</h3>
+        <p>Hands-on practicum for the Mechanical Maintenance Engineering course. I took apart and reassembled a journal bearing set, measured the shaft, housing and bearing, and checked the fit:</p>
+        <ul class="pts">
+          <li>Checked radial clearance with a feeler gauge and Prussian blue contact marks.</li>
+          <li>Measured clearance of 100 µm, inside the 76.2–127 µm standard range.</li>
+          <li>Found uneven contact on the bearing surface, a sign of possible misalignment, and flagged it for re-checking.</li>
+          <li>Wrote the full practicum report, including shaft levelling and component dimensions.</li>
+        </ul>
+        <div class="calc-grid">
+          <figure><button type="button" class="thumb" data-full="certs/jb-contact.jpg" data-title="Contact check · Prussian blue contact pattern"><img src="certs/jb-contact.jpg" alt="Bearing half with Prussian blue contact pattern" loading="lazy"></button><figcaption><strong>Contact check</strong> Prussian blue contact pattern</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/jb-bearing.jpg" data-title="Bearing set · Shell and housing after disassembly"><img src="certs/jb-bearing.jpg" alt="Journal bearing shell and housing during disassembly" loading="lazy"></button><figcaption><strong>Bearing set</strong> Shell and housing after disassembly</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/jb-shaft.jpg" data-title="Layout · Shaft and bearing positions"><img src="certs/jb-shaft.jpg" alt="Sketch of shaft with two bearings and dimensions" loading="lazy"></button><figcaption><strong>Layout</strong> Shaft and bearing positions</figcaption></figure>
+        </div>
+        <div class="spec"><span class="chip">Journal bearing</span><span class="chip">Feeler gauge</span><span class="chip">Prussian blue</span><span class="chip">Clearance check</span><span class="chip">Alignment</span></div>
+      </article>
+      <article class="proj">
+        <div class="no"><span class="mono">PRJ-07 · Polban · 2024</span><span class="mono">Design · FEA</span></div>
+        <h3>Design and FEA validation of a motorcycle footstep</h3>
+        <p>Modelled a motorcycle footstep in SolidWorks from scratch, with function and manufacturability in mind, then checked it with a static FEA in AISI 304 stainless steel: fixed at the mounting point, with a static load on the body to represent a rider's weight.</p>
+        <ul class="pts">
+          <li>Max von Mises stress of 22.81 MPa at the base fillet, far below the 206.8 MPa yield.</li>
+          <li>Max displacement of 0.0208 mm, so the part stays rigid under load.</li>
+          <li>Factor of safety of 9.06; topology optimisation suggested next to cut weight.</li>
+        </ul>
+        <div class="calc-grid">
+          <figure><button type="button" class="thumb" data-full="certs/fs-cad.jpg" data-title="3D model · Footstep modelled in SolidWorks"><img src="certs/fs-cad.jpg" alt="SolidWorks 3D model of the motorcycle footstep" loading="lazy"></button><figcaption><strong>3D model</strong> Footstep modelled in SolidWorks</figcaption></figure>
+          <figure><button type="button" class="thumb" data-full="certs/fs-stress.jpg" data-title="Static study · von Mises stress plot"><img src="certs/fs-stress.jpg" alt="SolidWorks von Mises stress plot of the footstep" loading="lazy"></button><figcaption><strong>Static study</strong> von Mises stress plot</figcaption></figure>
+        </div>
+        <div class="spec"><span class="chip">SolidWorks</span><span class="chip">Static FEA</span><span class="chip">AISI 304</span><span class="chip">Factor of safety</span></div>
+      </article>
     </div>
   </div>
 </section>
